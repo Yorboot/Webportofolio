@@ -1,69 +1,89 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
 /*Main page*/
-.flex-container > h1 {
-    font-size: 500%;
-    display: flex;
-    margin-top: 20%;
-    justify-content: center ;
-    align-items: center;
-    color: #757575;
-}
-.flex-container>ul {
-    list-style-type: none;
-    font-size: 140%;
-    padding-left: 25%;
-}
-.flex-container>ul>a {
-    color: #757575;
-    text-decoration: none;
-    border-radius: 10px;
-    border: 5px solid #757575;
-    margin: 3%;
-    padding: 5px;
-}
-/*About me page*/
-.flex-container-aboutme > h1{
-    font-size: 360%;
-    display: flex;
-    margin-top: 4%;
-    justify-content: center;
-    align-items: center;
-    color: #757575;
-}
-.flex-container-aboutme > p{
-    color: #757575;
-    font-size: 200%;
-    margin-top: 7%;
-}
-.flex-container-aboutme > ul {
-    list-style-type: none;
-    display: flex;
-    font-size: 140%;
-    padding-left: 66%;
-}
-.flex-container-aboutme > ul > a{
-    color: #757575;
-    text-decoration: none;
-    border-radius: 10px;
-    border: 5px solid #757575;
-    padding: 5px;
-    margin: 2%;
-
-}
-/*Central classes*/
-.background {
-    background-image: url(/Webportofolio/Images/BackGround.jpg);
-    background-position: center center;
-    background-repeat: repeat-y;
+.Head{
+    background-color: rgb(218, 255, 255);
     height: 100%;
-    width: 99%
+    width: 100%;
+    box-shadow: 0px 10px 10px 0px rgb(181, 190, 190);
 }
+.Navbar> ul{
+    list-style-type: none;
+    margin: 0%;
+    font-size: 450%;
+    padding-bottom: 0.3%;
+}
+.Navbar> ul >li{
+    display: inline;
+    padding-left: 10%;
+}
+
+.Navbar> ul>li > a{
+    padding-left: 1%;
+    font-size: 3vw;
+    text-decoration: none;
+    color: rgb(177, 177, 255);
+    font-family: 'Anton', sans-serif;
+    transition: boxShadow 1s;
+}
+/*About me*/
+.Main-Text > h1{
+    color: rgb(170, 156, 248);
+    font-size: 350%;
+    padding-left: 39vw;
+    padding-top: 1vw;
+    font-family: 'Anton', sans-serif;
+}
+.logo{
+    height: 10%;
+    width: 10%;
+    padding-left: 39vw;
+    padding-top: 1vw;
+}
+
+.Main-Text > p{
+    font-family: 'Anton', sans-serif;
+    color: rgb(131, 111, 248);
+    font-size: 120%;
+}
+.Main-Text> img{
+    height: 7%;
+    width: 7%;
+    padding-left: 10vw;
+}
+.Main-Text > p> a{
+    text-decoration: none;
+    color: rgb(131, 111, 248);
+}
+.Contact> ul>li{
+    color: rgb(131, 111, 248);
+    text-decoration: none;
+    font-size: 150%;
+}
+.Contact > ul > li> a
+{
+    font-size: 120%;
+    text-decoration: none;
+    color: rgb(131,111,248);
+}
+.Contact > ul{
+    list-style-type: none;
+}
+
+/*Central classes*/
 .Copyrights {
     font-size: 1vw;
     color: #757575;
     margin-left: 93%;
-    margin-top: 20%;
-    height: 99%;
+    margin-top: 10vw;
     width: 7%;
+}
+body{
+    margin:0;
+    background-image: url(/Images/WhiteBackGround.jpg);
+    background-size: 100% 100%;
+    background-repeat: contain;
+}
+/*Transitions*/
+
+.Navbar> ul:hover{
+    box-shadow: 10px gray;
 }
