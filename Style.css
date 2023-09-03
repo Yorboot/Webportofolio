@@ -1,4 +1,4 @@
-/*Main page*/
+/*Navbar*/
 .Head{
     background-color: rgb(218, 255, 255);
     height: 100%;
@@ -16,13 +16,37 @@
     padding-left: 10%;
 }
 
+@media (max-width: 35rem){
+    .Navbar>ul {
+        list-style-type: none;
+        margin: 0%;
+        font-size: 150%;
+        padding-bottom: 0.3%;
+        }
+
+    .nav-link::before 
+    {
+        transition: 300ms;
+        height: 2px;
+        content: "";
+        position: absolute;
+        background-color: rgb(131, 111, 248);
+    }
+    body{
+    margin:0;
+    background-image: url(/Images/WhiteBackGround.jpg);
+    background-size: 100% 1000%;
+}
+
+}
+
 .Navbar> ul>li > a{
     padding-left: 1%;
     font-size: 3vw;
     text-decoration: none;
     color: rgb(177, 177, 255);
     font-family: 'Anton', sans-serif;
-    transition: boxShadow 1s;
+    opacity: 0.65;
 }
 /*About me*/
 .Main-Text > h1{
@@ -44,31 +68,89 @@
     color: rgb(131, 111, 248);
     font-size: 120%;
 }
-.Main-Text> img{
-    height: 7%;
-    width: 7%;
-    padding-left: 10vw;
-}
 .Main-Text > p> a{
     text-decoration: none;
     color: rgb(131, 111, 248);
 }
+/*Contact*/
 .Contact> ul>li{
     color: rgb(131, 111, 248);
     text-decoration: none;
     font-size: 150%;
 }
-.Contact > ul > li> a
+.Contact-Text
 {
-    font-size: 120%;
+    font-size: 130%;
     text-decoration: none;
     color: rgb(131,111,248);
 }
 .Contact > ul{
     list-style-type: none;
 }
+.Discord{
+    color: rgb(131, 111, 248);
+    font-size: 120%;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-weight: lighter;
+}
+/*Images*/
+.WebsitePng{
+    height: 7%;
+    width: 7%;
+    padding-left: 10vw;
+    display: flex;
+    align-content: center;
+}
+.RustPng{
+    height: 10%;
+    width: 10%;
+    padding-left: 9vw;
+    display: flex;
+    align-content: center;
+}
 
 /*Central classes*/
+body{
+    margin:0;
+    background-image: url(/Images/WhiteBackGround.jpg);
+    background-size: 100% 100%;
+}
+/*Transitions*/
+
+.nav-link:hover {
+    opacity: 1;
+}
+
+.nav-link::before {
+    transition: 300ms;
+    height: 5px;
+    content: "";
+    position: absolute;
+    background-color: rgb(131, 111, 248);
+}
+
+.nav-link-ltr::before {
+    width: 0%;
+    bottom:2%;
+}
+
+.nav-link-ltr:hover::before {
+    width: 100%;
+}
+.nav-link{
+    position: relative;
+}
+/*Footer*/
+.To-Top{
+    color: rgb(168, 152, 255);
+    font-size: 140%;
+    opacity: 1;
+    text-decoration: none;
+}
+
+
 .Copyrights {
     font-size: 1vw;
     color: #757575;
@@ -76,14 +158,12 @@
     margin-top: 10vw;
     width: 7%;
 }
-body{
-    margin:0;
-    background-image: url(/Images/WhiteBackGround.jpg);
-    background-size: 100% 100%;
-    background-repeat: contain;
+#button{
+    text-decoration: none;
+    z-index: 99;
 }
-/*Transitions*/
-
-.Navbar> ul:hover{
-    box-shadow: 10px gray;
+#button.show{
+    position: fixed;
+    opacity: 1;
+    visibility: visible;
 }

@@ -3,18 +3,18 @@
 <head>
   <title>Main Page</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <script src="/Style.css" defer></script>
+  <script src="/index.js" defer></script>
   <link rel="stylesheet" href="/Style.css">
 </head>
 <body>
     <div class="Main">
       <header class="Head">
-      <div class="Navbar">
+      <div class="Navbar" id = "Top-Screen">
       <ul>
-        <li><a href='#AboutMe' class="Anchors">About me</a></li>
-        <li><a href='#Skils' class="Anchors">Skils</a></li>
-        <li><a href= '#MyProjects' class="Anchors">My Projects</a></li>
-        <li><a href='#Contact' class="Anchors">Contact</a></li>
+        <li><a href='#AboutMe' class="nav-link nav-link-ltr">About me</a></li>
+        <li><a href='#Skils' class="nav-link nav-link-ltr">Skils</a></li>
+        <li><a href= '#MyProjects' class="nav-link nav-link-ltr">My Projects</a></li>
+        <li><a href='#Contact' class="nav-link nav-link-ltr">Contact</a></li>
       </ul>
       </div>
       </header>
@@ -25,22 +25,23 @@
         <h1 id = "Skils">Skils</h1>
         <p>My most comfortable languages are java and c#. I have basic understandings of html,css and javascript just for web development purposes. I have about 2 years experience in the unity game engine/framework and still have to bring out a game.</p>
         <h1 id = "MyProjects">My Projects</h1>
-        <img src="/Images/Discordpf.png">
+        <img src="/Images/Discordpf.png" class="WebsitePng">
         <p>This is my webpage wich is one of my higher priority projects and wich I have made to learn html,css,javascript for fun. <a href="https://github.com/Roy123132123/Webportofolio">Link to gitub Repo:https://github.com/Roy123132123/Webportofolio</a></p>
-        <img src="/Images/rust.jpg">
+        <img src="/Images/Rust_(video_game)-Logo.wine.png" class="RustPng">
         <p>this is my rust plugin wich I have been working on since june 2023 it isnt my main project but I do have plans to develop it further. <a href="https://github.com/Roy123132123/RustPlugin">Link to github Repo:https://github.com/Roy123132123/RustPlugin</a></p>
         <h1 id = "Contact">Contact</h1>
         <div class="Contact">
         <ul>
-          <li>Discord: royboot</li>
-          <li>instagram:<a href="https://www.instagram.com/roei.boot/">roei.boot</a></li>
-          <li>Email:<a href="mailto:roeibootbuissness@gmail.com">roeibootbuissness@gmail.com</a></li>
+          <li><h3 class="Discord">Discord: royboot</h3></li>
+          <li>instagram: <a href="https://www.instagram.com/roei.boot/" class="Contact-Text">roei.boot</a></li>
+          <li>Email: <a href="mailto:roeibootbuissness@gmail.com" class="Contact-Text">roeibootbuissness@gmail.com</a></li>
         </ul>
         <div>
       </main>
     </div>
 </body>
 <footer class="Copyrights">
+      <a href="#Top-Screen" id = "button"><h2 class="To-Top">Top</h2></a>
   <span>&copy; Roeiportofolio</span>
 </footer>
 </html>
