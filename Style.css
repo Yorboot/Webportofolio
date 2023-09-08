@@ -150,6 +150,14 @@ html{
     }
 }
 /*Footer*/
+.Copyrights {
+    font-size: 1vw;
+    color: #757575;
+    margin-left: 93%;
+    margin-top: 10vw;
+    width: 7%;
+}
+/*Top button*/
 .To-Top{
     height: 0%;
     width: 80%;
@@ -163,13 +171,13 @@ html{
 .To-Top-A{
     opacity: 0.4;
     right: 6%;
-    left: 99rem;
+    left: 113rem;
     bottom: 2rem;
     position: fixed;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background-color: aquamarine;
+    background-image: linear-gradient(to top right, rgb(197, 67, 67), rgb(0, 0, 143), rgb(61, 52, 52));
     border-radius: 0.5rem;
     text-decoration: none;
     width: 4%;
@@ -183,11 +191,3 @@ html{
     justify-content: center;
     align-items: center;
 }
-.Copyrights {
-    font-size: 1vw;
-    color: #757575;
-    margin-left: 93%;
-    margin-top: 10vw;
-    width: 7%;
-}
-/*Top button*/
