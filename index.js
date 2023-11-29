@@ -1,6 +1,6 @@
-var btn = $('#button');
+var btn = document.getElementById("top");
 
-$(window).scroll(function () {
+(window).scroll(function () {
     if ($(window).scrollTop() > 10) {
         btn.addClass('show');
     } else {
