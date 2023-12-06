@@ -131,7 +131,7 @@ html{
     bottom:2%;
 }
 .nav-link-ltr:hover::before {
-    width: 100%;
+    width: 76%;
 }
 .nav-link{
     position: relative;
