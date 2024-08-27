@@ -1,0 +1,47 @@
+.Flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.Main{
+    font-size: xxx-large;
+}
+
+.Ul{
+    display: flex;
+    flex-direction: row;
+    padding: 1vh;
+}
+li{
+    font-size: xx-large;
+    margin: 0 10% 0 10% !important;
+
+}
+.Nav{
+    width: 100vw;
+    background-image: linear-gradient(to right, rgba(122, 210, 240, 0.5),rgb(105, 182, 255),rgb(113, 138, 248),rgb(105, 182, 255), rgba(122, 210, 240, 0.5));
+    box-shadow: rgb(211, 244, 255) 0 2px 15px 2px;
+}
+Main{
+    height: 85%;
+    width: 100%;
+}
+body {
+    background-image: radial-gradient(circle, rgb(113, 113, 248), rgb(122, 210, 240));
+    background-repeat: no-repeat;
+}
+.Coppyright{
+    position: fixed;
+    right: 0.5vh;
+    bottom: 0.5vh;
+
+    float: right;
+}
+.Lp{
+    margin: 0 7% 0 10% !important;
+}
+
+.text{
+    margin-top: 1.5vh;
+}
