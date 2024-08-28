@@ -41,19 +41,16 @@ body {
 .Lp{
     margin: 0 7% 0 10% !important;
 }
-
-.text{
-    margin-top: 1.5vh;
-}
 img{
     margin-top: 1.5vh;
     height: 5vh;
     width: 5vh;
     border-radius: 25%;
 }
-ul{
-    width: 60%;
-}
 p{
     font-size: x-large;
+    text-wrap: nowrap;
+}
+a{
+    text-wrap: nowrap;
 }
