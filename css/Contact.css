@@ -9,14 +9,15 @@
 }
 
 .Ul{
+    height: 6vh;
     display: flex;
     flex-direction: row;
-    padding: 1vh;
+    justify-content: space-between;
 }
 li{
-    font-size: xx-large;
-    margin: 0 10% 0 10% !important;
-
+    height: fit-content;
+    font-size: 2em;
+    margin-top: 1.5vh !important;
 }
 .Nav{
     width: 100vw;
@@ -39,7 +40,8 @@ body {
     float: right;
 }
 .Lp{
-    margin: 0 7% 0 10% !important;
+    position: relative;
+    left: 2vw;
 }
 
 .text{
@@ -52,8 +54,16 @@ img{
     border-radius: 25%;
 }
 ul{
-    width: 60%;
+    width: 100vw;
+    margin: 0;
 }
 p{
     font-size: x-large;
+}
+.Navlink:hover{
+    background-color: rgba(115, 115, 156, 0.885);
+}
+.Rp{
+    position: relative;
+    right: 2vw;
 }
