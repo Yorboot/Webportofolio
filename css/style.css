@@ -1,0 +1,175 @@
+*,*:before,*:after{
+    box-sizing: border-box;
+}
+.Flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Main{
+    font-size: xxx-large;
+
+}
+
+.Ul{
+    display: flex;
+    flex-direction: row;
+    padding: 1vh;
+    justify-content: space-evenly !important;
+}
+li{
+    font-size: xx-large;
+}
+a{
+    color: white !important;
+}
+.Nav{
+    width: inherit;
+
+}
+Main{
+    height: 85%;
+    width: 100%;
+}
+body {
+    z-index: 0;
+    background-image: radial-gradient(circle, rgb(113, 113, 248), rgb(122, 210, 240));
+    background-repeat: no-repeat;
+}
+.Coppyright{
+    position: fixed;
+    right: 0.5vh;
+    bottom: 0.5vh;
+
+    float: right;
+}
+.Lp{
+    margin: 0 7% 0 10% !important;
+}
+.input{
+    border: 4px solid rgba(217, 217, 217, 0.55);
+    background-color: rgba(109, 177, 255, 0.5);
+    box-shadow: 5px 8px 10px 2px rgb(176 228 255);
+    width: 100%;
+    padding: 1vh 1vw 1vh 1vw;
+    margin: 0.4vw 0vw 1vh 0.5vw;
+    display: inline-block;
+    box-sizing: border-box;
+    border-radius: 4px;
+    font-size: 1.5em;
+    max-width: 120%;
+    min-width: 110%;
+}
+.Labels{
+    min-width: 70%;
+    max-width: 80%;
+}
+.Dc{
+    overflow: hidden;
+    resize: none;
+    appearance: none !important;
+}
+.Submit{
+    margin-top: 1vh;
+    height: 3vh;
+    width: 80%;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(109, 177, 255, 0.5);
+    box-shadow: 5px 8px 10px 2px rgb(176 228 255);
+}
+.Submit:active{
+    transition: box-shadow 0.2s ease;
+    box-shadow: 0 0 0 0 rgb(176 228 255);
+}
+.Dt{
+    font-weight: 500;
+    font-size: 1.2em;
+    text-align: left;
+    margin-right: 5vw;
+}
+.Form{
+    position: absolute;
+    height: 40vh;
+    width: 30vw;
+}
+:root{
+    --bar-width: 4vw;
+    --bar-height: 1.2vh;
+    --bar-gap: 5px;
+    --left: 0.5vw;
+    --top: 0.5vw;
+    --animation: 250ms linear;
+    --transform-origin: left center;
+    --HamburgerH: calc(var(--bar-height)*3 + var(--bar-gap)*2);
+}
+.Hamburger::before, .Hamburger::after, .Hamburger input{
+    content: "";
+    background-color: rgba(0, 98, 131, 0.8);
+    height: var(--bar-height);
+    width: var(--bar-width);
+    border-radius: 10000px;
+    transition: opacity var(--animation),width var(--animation),rotate var(--animation),translate,var(--animation),background-color var(--animation);
+}
+.Hamburger{
+    --hamburgerW : calc(var(--HamburgerH) * 1.41421356237);
+    display: flex;
+    flex-direction: column;
+    gap: var(--bar-gap);
+    width: max-content;
+    position: absolute;
+    left: var(--left);
+    top: var(--top);
+    z-index: 2;
+    cursor: pointer;
+}
+.Hamburger:has(input:checked)::before {
+    width: var(--hamburgerW);
+    rotate: 45deg;
+    transform-origin: var(--transform-origin);
+    translate: 0 calc(var(--bar-height)/-2);
+}
+.Hamburger:has(input:checked)::after{
+    width: var(--hamburgerW);
+    rotate: -45deg;
+    transform-origin: var(--transform-origin);
+    translate: 0 calc(var(--bar-height)/2);
+}
+/*Disable basic checkbox look*/
+.Hamburger input{
+    appearance: none;
+    outline: none;
+    pointer-events: none;
+}
+.Hamburger input:checked{
+    opacity: 0;
+    width: 0;
+}
+.sidebar {
+    translate: -100%;
+    transition: translate var(--animation);
+    padding-left: 0.5vw;
+    padding-right: 1vw;
+    padding-top: calc(var(--bar-height) + var(--bar-gap) + var(--top));
+    background-image: linear-gradient(to bottom,rgba(122, 210, 240, 0.5),rgba(122, 210, 240, 0.5));
+    box-shadow: rgb(211, 244, 255) 0 2px 15px 2px;
+    color: white;
+    max-width: 20rem;
+    min-width: 10rem;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+.Nav{
+    height:90%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: calc(var(--bar-height) + var(--bar-gap) + var(--top) + 1vw);
+}
+.Hamburger:has(input:checked) +.sidebar{
+    translate: 0;
+}

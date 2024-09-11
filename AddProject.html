@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AddProject</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+</head>
+<body>
+    <header>
+        <label for="Check" class="Hamburger">
+            <input type="checkbox" id="Check">
+        </label>
+        <aside class="sidebar">
+            <ul class="Nav">
+                <li class="link"><a href="AboutMe.html">About me</a></li>
+                <li class="link"><a href="Skillset.html">Skillset</a></li>
+                <li class="link"><a href="Projects.php">Projects</a></li>
+                <li class="link"><a href="AddProject.html">Add Project</a></li>
+                <li class="link"><a href="Contact.html">Contact</a></li>
+            </ul>
+        </aside>
+    </header>
+    <main class="Flex">
+        <form action="includes/Ph.inc.php" class="Flex Form" method="post">
+            <label for="Title" class="Labels Dt">
+                Title
+                <input type="text" id="Title" class="input" name="Title">
+            </label>
+            <label for="Description" class="Labels Dt">
+                Description
+                <textarea class="input Dc" id="Description" oninput="autoResize(this)" name="Description"></textarea>
+            </label>
+            <label for="ImgL" class="Labels Dt">
+                Image
+                <input type="file" id="ImgL" class="input" name="image" formenctype="multipart/form-data">
+            </label>
+            <label for="Link" class="Labels Dt">
+                Link
+                <input type="text" id="Link" class="input" name="Link">
+            </label>
+            <button class="Submit" type="submit">Submit</button>
+        </form>
+    </main>
+    <script>
+        function autoResize(textarea) {
+            textarea.style.height = 'auto';
+            textarea.style.height = textarea.scrollHeight + 'px';
+        }
+    </script>
+
+</body>
+</html>
