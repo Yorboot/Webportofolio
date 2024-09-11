@@ -22,7 +22,7 @@
         </aside>
     </header>
     <main class="Flex">
-        <form action="includes/Ph.inc.php" class="Flex Form" method="post">
+        <form action="includes/Ph.inc.php" class="Flex Form" method="post" enctype="multipart/form-data">
             <label for="Title" class="Labels Dt">
                 Title
                 <input type="text" id="Title" class="input" name="Title">
@@ -33,7 +33,7 @@
             </label>
             <label for="ImgL" class="Labels Dt">
                 Image
-                <input type="file" id="ImgL" class="input" name="image" formenctype="multipart/form-data">
+                <input type="file" id="ImgL" class="input" name="image">
             </label>
             <label for="Link" class="Labels Dt">
                 Link
