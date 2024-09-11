@@ -11,19 +11,31 @@
 
 <body>
   <header>
-    <nav class="Nav">
-      <ul class="Ul">
-        <li class="Lp"><a href="AboutMe.html">About me</a></li>
-        <li><a href="Skillset.html">Skillset</a></li>
-        <li><a href="Projects.html">Projects</a></li>
-        <li><a href="Contact.html">Contact</a></li>
+    <label for="Check" class="Hamburger">
+      <input type="checkbox" id="Check">
+    </label>
+    <aside class="sidebar">
+      <ul class="Nav">
+        <li class="link"><a href="AboutMe.html">About me</a></li>
+        <li class="link"><a href="Skillset.html">Skillset</a></li>
+        <li class="link"><a href="Projects.php">Projects</a></li>
+        <li class="link"><a href="AddProject.html">Add Project</a></li>
+        <li class="link"><a href="Contact.html">Contact</a></li>
       </ul>
-    </nav>
+    </aside>
   </header>
   <main class="Flex">
+
     <div class="Sticky">
       <h1>Projects</h1>
     </div>
+      <?php
+      require_once "includes/dbh.inc.php";
+      global $pdo;
+      $stmt = $pdo->prepare("SELECT * FROM Projects");
+      $stmt->execute();
+      $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+      ?>
     <ul>
       <li>
         <img src="Imgs/favcon.png" alt="Project Starbot">
