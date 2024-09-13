@@ -52,43 +52,55 @@ body {
     border: 4px solid rgba(217, 217, 217, 0.55);
     background-color: rgba(109, 177, 255, 0.5);
     box-shadow: 5px 8px 10px 2px rgb(176 228 255);
-    width: 100%;
     padding: 1vh 1vw 1vh 1vw;
     margin: 0.4vw 0vw 1vh 0.5vw;
     display: inline-block;
     box-sizing: border-box;
     border-radius: 4px;
     font-size: 1.5em;
-    max-width: 120%;
-    min-width: 110%;
+    max-width: 35vw;
+    min-width: 25vw;
 }
 .Labels{
+    color: black;
+    font-weight: 550 !important;
+    font-size: 1.3em !important;
     min-width: 70%;
     max-width: 80%;
+    float: left;
 }
 .Dc{
     overflow: hidden;
     resize: none;
     appearance: none !important;
 }
-.Submit{
-    margin-top: 1vh;
-    height: 3vh;
-    width: 80%;
+.Title{
+    font-size: 3em;
+}
+.Img::file-selector-button{
+    appearance: none !important;
+    background-color: transparent;
+    cursor: pointer;
     border-radius: 5px;
     border: none;
+    margin-left: 0.5vw;
+    margin-right: 0.5vw;
+}
+.Submit{
+    margin-left: 2vw;
+    margin-top: 1vh;
+    height: 5vh;
+    min-width: 25vw;
+    max-width: 35vw;
+    border-radius: 5px;
+    border: 4px solid rgba(217, 217, 217, 0.55);
     background-color: rgba(109, 177, 255, 0.5);
-    box-shadow: 5px 8px 10px 2px rgb(176 228 255);
+    box-shadow: 5px 8px  10px 2px rgb(176 228 255);
+    font-size: 2em;
 }
 .Submit:active{
     transition: box-shadow 0.2s ease;
     box-shadow: 0 0 0 0 rgb(176 228 255);
-}
-.Dt{
-    font-weight: 500;
-    font-size: 1.2em;
-    text-align: left;
-    margin-right: 5vw;
 }
 .Form{
     position: absolute;

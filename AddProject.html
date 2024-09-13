@@ -6,6 +6,12 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
 </head>
+<script>
+    function autoResize(textarea) {
+        textarea.style.height = 'auto';
+        textarea.style.height = textarea.scrollHeight + 'px';
+    }
+</script>
 <body>
     <header>
         <label for="Check" class="Hamburger">
@@ -23,6 +29,7 @@
     </header>
     <main class="Flex">
         <form action="includes/Ph.inc.php" class="Flex Form" method="post" enctype="multipart/form-data">
+            <h1 class="Title">Add Project</h1>
             <label for="Title" class="Labels Dt">
                 Title
                 <input type="text" id="Title" class="input" name="Title">
@@ -33,7 +40,7 @@
             </label>
             <label for="ImgL" class="Labels Dt">
                 Image
-                <input type="file" id="ImgL" class="input" name="image">
+                <input type="file" id="ImgL" class="input Img" name="Image">
             </label>
             <label for="Link" class="Labels Dt">
                 Link
@@ -42,12 +49,10 @@
             <button class="Submit" type="submit">Submit</button>
         </form>
     </main>
-    <script>
-        function autoResize(textarea) {
-            textarea.style.height = 'auto';
-            textarea.style.height = textarea.scrollHeight + 'px';
-        }
-    </script>
+    <footer>
+        <span class="Coppyright">&copy;Roy</span>
+    </footer>
+
 
 </body>
 </html>
