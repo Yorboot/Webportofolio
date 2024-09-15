@@ -15,13 +15,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $Description = Cinput($_POST["Description"]);
             $Link = $_POST["Link"];
             $Img = CheckImg($imageFileType,$target_file)??null;
+
             if($Img == null){throw new Exception("File is null");}
 
             $stmt = $pdo ->prepare("INSERT INTO Projects (Titel, Description,Image,Link) VALUES (:Titel,:Description,:Image,:Link)");
             $stmt -> bindParam(':Titel', $Title);
             $stmt -> bindParam(':Description', $Description);
             $stmt -> bindParam(':Image', $target_file);
-            $stmt -> bindParam(':Link', $link);
+            $stmt -> bindParam(':Link', $Link);
             $stmt -> execute();
            //header("Location:../Contact.html");
             exit();

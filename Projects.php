@@ -1,3 +1,6 @@
+<?php
+require_once 'includes/Projects.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,14 +31,6 @@
 
     <div class="Sticky">
       <h1>Projects</h1>
-    </div>
-      <?php
-      require_once "includes/dbh.inc.php";
-      global $pdo;
-      $stmt = $pdo->prepare("SELECT * FROM Projects");
-      $stmt->execute();
-      $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-      ?>
     <ul>
       <li>
         <img src="Imgs/favcon.png" alt="Project Starbot">
@@ -49,6 +44,7 @@
         <img src="Imgs/Gradient.jpg" alt="Project Gradient">
         <a href="https://github.com/Roy123132123/Gradient"><p>Gradients this is a gitHub repo with some documentation about all gradients in css and how to use them also includes code examples</p></a>
       </li>
+        <?php Project();?>
     </ul>
   </main>
   <footer>
