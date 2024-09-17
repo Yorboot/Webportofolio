@@ -26,6 +26,7 @@ function Project(): void
                     <a href="' . $link . '">
                         <p>' . $description . '</p>
                     </a>
+                    <button type="submit" class="Remove"></button>
                 </li>';
         }
     } catch (Exception $e) {
