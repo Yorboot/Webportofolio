@@ -1,26 +1,34 @@
 <?php
 require_once "includes/dbh.inc.php";
-
-
-
-function Project():void
+function Project(): void
 {
-    GetProjects();
-    $Project = '
-    <li>
-        <img src="includes/<?php echo $results; ?>" alt="<?php echo $Project . $Title; ?>">
-        <a href="<?php echo $Link; ?>"><p><?php echo $Description; ?></p></a>
-    </li>';
-    for($i=0;$i<count($results);$i++)
-    {
+    try {
 
-        echo $Project;
+
+        global $pdo;
+        $stmt = $pdo->prepare("SELECT * FROM `Projects`");
+        $stmt->execute();
+        $rows= $stmt->fetchall(PDO::FETCH_ASSOC);
+        if ($rows === false) {
+
+            echo "No projects found.";
+            return;
+        }
+        foreach ($rows as $row) {
+            $image = htmlspecialchars($row['Image']);
+            $title = htmlspecialchars($row['Titel']);
+            $link = htmlspecialchars($row['Link']);
+            $description = htmlspecialchars($row['Description']);
+
+            echo '
+                <li>
+                    <img src="includes/' . $image . '" alt="Project ' . $title . '">
+                    <a href="' . $link . '">
+                        <p>' . $description . '</p>
+                    </a>
+                </li>';
+        }
+    } catch (Exception $e) {
+        echo $e->getMessage();
     }
-
-}
-function GetProjects(){
-    global $pdo;
-    $stmt = $pdo->prepare("SELECT `Image` FROM `Projects` WHERE `id` = 6");
-    $stmt->execute();
-    return $results= $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
