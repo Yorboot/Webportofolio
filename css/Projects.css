@@ -49,6 +49,9 @@ p{
     font-size: x-large;
 }
 :root{
+    --Ele-width: 80vw;
+    --X-Width: 0.3vw;
+    --X-length: 1.5vw;
     --bar-width: 4vw;
     --bar-height: 1.2vh;
     --bar-gap: 5px;
@@ -125,4 +128,42 @@ p{
 }
 .Hamburger:has(input:checked) +.sidebar{
     translate: 0;
+}
+.Cont{
+    width: var(--Ele-width);
+    display: flex;
+    flex-direction: column;
+}
+.Row{
+    flex-direction: row;
+}
+.Remove{
+    margin-left: calc(var(--Ele-width)/12);
+    cursor: pointer;
+    appearance: none !important;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    width:3vw;
+    height:5vh;
+}
+.Remove::before,.Remove::after{
+    border-radius: 100000px;
+    display: block;
+    content: "";
+    width: var(--X-Width);
+    height: var(--X-Width);
+    background-color: black;
+}
+.Remove::after{
+    width: var(--X-length);
+    rotate: 45deg;
+    transform-origin: var(--transform-origin);
+    translate: 0 calc(var(--X-length)/-2.6);
+}
+.Remove::before{
+    width: var(--X-length);
+    rotate: -45deg;
+    transform-origin: var(--transform-origin);
+    translate: 0 calc(var(--X-length)/2);
 }

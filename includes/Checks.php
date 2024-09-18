@@ -46,3 +46,7 @@ function CheckImg($imageFileType,$target_file):bool
         return false;
     }
 }
+function MainHead(): void
+{
+    header("location: ../index.html");
+}

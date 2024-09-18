@@ -44,6 +44,7 @@ require_once 'includes/Projects.php';
       </li>
         <?php
         Project();
+
         ?>
     </ul>
   </main>
