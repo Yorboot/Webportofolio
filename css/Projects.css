@@ -48,6 +48,19 @@ img{
 p{
     font-size: x-large;
 }
+.link:hover::after{
+    content: "";
+    width: 100%;
+    height: 5%;
+    background-color: slategray;
+    transition: width 0.1s ease-in-out;
+}
+.link:hover::before{
+    content: "";
+    width: 0;
+    height: 5%;
+    background-color: slategray;
+}
 :root{
     --Ele-width: 80vw;
     --X-Width: 0.3vw;

@@ -1,33 +1,36 @@
 <?php
+if(session_status() == PHP_SESSION_NONE){session_start();}
+if(!isset($_SESSION["IsAdmin"])){$_SESSION["IsAdmin"] = false;}
 require_once "includes/dbh.inc.php";
-require_once "Remove.inc.php";
 function Project(): void
 {
     try {
 
-
+        global $id;
         global $pdo;
+        global $Image;
         $stmt = $pdo->prepare("SELECT * FROM `Projects`");
         $stmt->execute();
         $rows= $stmt->fetchall(PDO::FETCH_ASSOC);
         if ($rows === false) {
-
             echo "No projects found.";
             return;
         }
         foreach ($rows as $row) {
-            $image = htmlspecialchars($row['Image']);
+            $Image= htmlspecialchars($row['Image']);
+            if($Image == null){echo "No image found";}
             $title = htmlspecialchars($row['Titel']);
             $link = htmlspecialchars($row['Link']);
+            $id = $row['id'];
             $description = htmlspecialchars($row['Description']);
 
             echo '
                 <li class="Cont">
                    <div class="Cont Row">
-                    <img src="includes/' . $image . '" alt="Project ' . $title . '">
-                    <form method ="POST">
+                    <img src="includes/' . $Image . '" alt="Project ' . $title . '">
+                    <form method ="POST" action="Projects.php">
                         <input type="hidden" name="id" value="' . $row['id'] . '">
-                        <button type="submit" class="Remove Flex" name="remove_project"></button>
+                        <button type="submit" class="Remove Flex" name="remove_project" style="display: ' . (!$_SESSION["IsAdmin"] ? 'block' : 'none') . ';"></button>
                     </form>
                     
                    </div>
@@ -40,7 +43,7 @@ function Project(): void
         }
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
             if(isset($_POST["id"])&&isset($_POST["remove_project"])){
-                Remove_Project_id($rows['id']);
+                Remove_Project_id($id);
             }
         }
     } catch (Exception $e) {
@@ -54,11 +57,11 @@ function Remove_Project_id($id): void
     $stmt->bindParam(":id", $id);
     $stmt->execute();
     $Image = $stmt->fetch();
-    unlink($Image["Image"]);
+    unlink('"./includes/"'.$Image["Image"].'');
 
     $stmt = $pdo->prepare("DELETE FROM PROJECTS WHERE id = :id");
     $stmt->bindParam(":id",$id);
     $stmt->execute();
-    header("Location../Projects.php");
+    header("Location:Projects.php");
 }
 

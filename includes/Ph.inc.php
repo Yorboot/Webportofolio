@@ -24,13 +24,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $stmt -> bindParam(':Image', $target_file);
             $stmt -> bindParam(':Link', $Link);
             $stmt -> execute();
-           //header("Location:../Contact.html");
+           header("Location:../Projects.php");
             exit();
         }catch (Exception $e){
             echo $e->getMessage();
         }
     }else{
-        //header("Location:../Projects.php");
+        header("Location:../Contact.html");
     }
 
 
