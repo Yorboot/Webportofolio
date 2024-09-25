@@ -118,6 +118,42 @@ body {
     --animation: 250ms linear;
     --transform-origin: left center;
     --HamburgerH: calc(var(--bar-height)*3 + var(--bar-gap)*2);
+    --modalH:20vh;
+    --modalW:25vw;
+    --modalBc:lightGray;
+}
+.Modal{
+    box-shadow: lightblue 4px 5px 8px 2px;
+    border-radius: 12px;
+    height: var(--modalH);
+    width: var(--modalW);
+    background-color: var(--modalBc);
+    display: grid;
+    justify-content: center;
+    flex-direction: column;
+}
+.Inline{
+    margin-right: auto;
+    margin-left: auto;
+    height: 10vh;
+    width: 10vw;
+    display: inline;
+    text-align: center;
+
+}
+.ModalT{
+    justify-self: flex-start;
+}
+.buttons{
+    box-shadow: lightblue 4px 5px 8px 2px;
+    border-radius: 12px;
+    border: none;
+    height: 3vh;
+    width: 4vw;
+    margin: 0.5vh 1vw;
+}
+.Btn{
+    margin-top: 50vh;
 }
 .Hamburger::before, .Hamburger::after, .Hamburger input{
     content: "";

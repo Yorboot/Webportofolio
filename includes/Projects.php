@@ -43,6 +43,20 @@ function Project(): void
         }
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
             if(isset($_POST["id"])&&isset($_POST["remove_project"])){
+                echo '
+                <li>
+                <form action="" id="Modal" class="Modal">
+                    <h1 class="ModalT">Are you sure you want to delete this project</h1>
+                    <div class="Inline">
+                        <button class="Yes buttons" onclick="Close()">Yes</button>
+                        <button class="NO buttons">No</button>
+                    </div>
+                </form>
+                </li>
+                <script>function Close(){
+                    let modal = document.getElementById("Modal");
+                    modal.style.display = "none";
+                }</script>';
                 Remove_Project_id($id);
             }
         }
