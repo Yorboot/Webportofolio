@@ -1,14 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './includes/php/header.php',
-    './includes/php/footer.php',
-    './index.php',
+    'includes/php/header.php',
+    'includes/php/footer.php',
+    'index.html',
   ],
   theme: {
     extend: {
       'backgroundImage': {
-        'backgroundImg': "url(/includes/imgs/background.webp"
+        'backgroundImg': "url(../imgs/background.webp)"
       }
       ,
     },
