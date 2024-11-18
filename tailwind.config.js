@@ -3,7 +3,8 @@ module.exports = {
   content: [
     'includes/php/header.php',
     'includes/php/footer.php',
-    'index.html',
+    'public/**/*.{html,php}',
+
   ],
   theme: {
     extend: {
