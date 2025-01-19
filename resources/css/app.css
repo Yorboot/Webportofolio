@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base{
+    * {
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        color: rgba(203,213,225);
+    }
+    .nav-link {
+
+        position: relative; /* Ensure ::before is positioned relative to the parent */
+        text-decoration: none;
+        color: white;
+    }
+
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 15%;
+        left: 0;
+        right: 0;
+        bottom: -0.5vh;
+        background-color: #9ca3af; /* Use background-color instead of color for the pseudo-element */
+        opacity: 0;
+        transition: width 0.7s,opacity 0.7s;
+        border-radius: 20px;
+    }
+    .nav-link:hover{
+        cursor: pointer;
+    }
+    .nav-link:hover::before {
+
+        width: 100%;
+        opacity: 1;
+    }
+}
