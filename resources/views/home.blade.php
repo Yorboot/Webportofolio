@@ -14,7 +14,7 @@
 </head>
 <body class="h-[100vh] w-[100vw] bg-slate-800">
     <?php
-    $header = storage_path("app/public/header.php");
+    $header = resource_path("./views/header.blade.php");
     if(file_exists($header)){
         require_once $header;
     }else{
@@ -26,7 +26,7 @@
         <h1 class="text-4xl">Welcome, take a look around to learn more about me</h1>
     </main>
     <?php
-        $footer = storage_path("app/public/footer.php");
+        $footer = resource_path("./views/footer.blade.php");
         if(file_exists($footer)){
             require_once $footer;
         }else{
