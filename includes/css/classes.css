@@ -1,9 +1,0 @@
-.form-group{
-    display: flex;
-    flex-direction: column;
-    color: white;
-    margin-bottom: 2.5vh;
-}
-.form-group > textarea,input{
-    color: black;
-}

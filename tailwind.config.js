@@ -1,18 +1,14 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    'includes/php/header.php',
-    'includes/php/footer.php',
-    'public/**/*.{html,php}',
-
-  ],
-  theme: {
-    extend: {
-      'backgroundImage': {
-        'backgroundImg': "url(../imgs/background.webp)"
-      }
-      ,
+    content: [
+        './resources/**/*.blade.php',
+        './resources/**/*.js',
+        './resources/**/*.vue',
+    ],
+    theme: {
+        extend: {},
     },
-  },
-  plugins: [],
+    variants: {
+        extend: {},
+    },
+    plugins: [],
 }
